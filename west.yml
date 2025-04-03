@@ -1,0 +1,25 @@
+manifest:
+  defaults:
+    remote: github
+
+  remotes:
+    - name: github
+      url-base: https://github.com
+
+  projects:
+    - name: zephyr
+      remote: github
+      repo-path: zephyrproject-rtos/zephyr
+      revision: v3.7.1
+      path: zephyr
+      import:
+        # By using name-allowlist we can clone only the modules that are
+        # strictly needed by the application.
+        name-allowlist:
+          - cmsis      # required by the ARM port
+          - hal_stm32  # required by the nucleo_f302r8 board (STM32 based)
+    - name: pigweed
+      remote: github
+      repo-path: google/pigweed
+      revision: 90d1391ff0c2fcb4717dc578bceccb2ec38643b8 # Latest as of Apr 5, 2025
+      path: third-party/pigweed
