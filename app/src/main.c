@@ -2,10 +2,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <stdio.h>
+#include "logging.h"
+
+#define PW_LOG_MODULE_NAME "main"
 
 int main(void)
 {
-    printf("Hello World!\n");
+    PW_LOG_INFO("Booting...");
     return 0;
 }
