@@ -3,8 +3,8 @@
 ## Initialization
 
 ```bash
-west init -m git@github.com:manojkumarpaladugu/STM32-Zephyr --mr main zephyr-ws
-cd zephyr-ws
+west init -m git@github.com:manojkumarpaladugu/STM32-Zephyr --mr main stm32-zephyr-ws
+cd stm32-zephyr-ws
 west update
 ```
 
@@ -19,7 +19,7 @@ west build -d _out/ast1030 --pristine -b ast1030_evb STM32-Zephyr/app/
 To run the application,
 
 ```bash
-qemu-system-arm -machine ast1030-evb -cpu cortex-m4 -nographic -kernel /workspaces/zephyr-ws/_out/ast1030/zephyr/zephyr.elf
+qemu-system-arm -machine ast1030-evb -cpu cortex-m4 -nographic -kernel _out/ast1030/zephyr/zephyr.elf
 ```
 
 To terminate QEMU, press Ctrl + A followed by X

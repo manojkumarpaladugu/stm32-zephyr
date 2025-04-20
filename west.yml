@@ -18,13 +18,15 @@ manifest:
         name-allowlist:
           - cmsis      # required by the ARM port
           - hal_stm32  # required by the nucleo_f302r8 board (STM32 based)
-    - name: pigweed
-      remote: github
-      repo-path: google/pigweed
-      revision: 90d1391ff0c2fcb4717dc578bceccb2ec38643b8 # Latest as of Apr 5, 2025
-      path: third-party/pigweed
-    - name: Commons
+    # Note: Module commons has to configure pigweed settings first before pigweed can be built.
+    #       So, commons module has to be imported before pigweed.
+    - name: commons
       remote: github
       repo-path: manojkumarpaladugu/commons
       revision: main
       path: modules/commons
+    - name: pigweed
+      remote: github
+      repo-path: google/pigweed
+      revision: 90d1391ff0c2fcb4717dc578bceccb2ec38643b8 # Latest as of Apr 5, 2025
+      path: third_party/pigweed
