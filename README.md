@@ -8,7 +8,7 @@ cd stm32-zephyr-ws
 west update
 ```
 
-## Build and running
+## Build and Running
 
 To build the application,
 

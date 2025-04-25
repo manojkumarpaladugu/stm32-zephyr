@@ -2,13 +2,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
- #include "logging.h"
+#define LOG_MODULE_NAME "main"
+#define MODULE_LOG_LEVEL LOG_LEVEL_DEBUG
 
- #define PW_LOG_MODULE_NAME "main"
+// Must be included after the log level and module name definitions
+#include "logging.h"
 
 int main(void)
 {
-    PW_LOG_INFO("Hello World!\n");
-    PW_LOG_INFO("Welcome %s\n", "Manoj");
+    LOG_DEBUG("Hi");
+    LOG_INFO("Hello world!");
+
     return 0;
 }
