@@ -13,5 +13,5 @@ set(APPLICATION_NAME app)
 target_sources(${APPLICATION_NAME} PRIVATE src/main.c)
 
 target_link_libraries(${APPLICATION_NAME}
-    PRIVATE CommonsLogging
+    PRIVATE commons
 )
