@@ -3,7 +3,7 @@
 ## Initialization
 
 ```bash
-west init -m git@github.com:manojkumarpaladugu/STM32-Zephyr --mr main stm32-zephyr-ws
+west init -m git@github.com:manojkumarpaladugu/stm32-zephyr --mr main stm32-zephyr-ws
 cd stm32-zephyr-ws
 west update
 ```
@@ -13,7 +13,7 @@ west update
 To build the application,
 
 ```bash
-west build -d _out/ast1030 --pristine -b ast1030_evb STM32-Zephyr/app/
+west build -d _out/ast1030 --pristine -b ast1030_evb stm32-zephyr/app/
 ```
 
 To run the application,
