@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 4.0.0)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
-project(ZEPHYR-STM32-NUCLEO LANGUAGES C VERSION 1.0.0)
+project(STM32-NUCLEO LANGUAGES C CXX VERSION 1.0.0)
 
 # Zephyr creates app target automatically
 set(APPLICATION_NAME app)
