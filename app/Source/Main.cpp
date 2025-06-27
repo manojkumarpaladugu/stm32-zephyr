@@ -6,7 +6,7 @@
 #define MODULE_LOG_LEVEL LOG_LEVEL_DEBUG
 
 // Must be included after the log level and module name definitions
-#include "logging.h"
+#include "Logging.h"
 
 int main(void)
 {
