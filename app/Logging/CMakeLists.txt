@@ -6,7 +6,7 @@
 
 target_include_directories(${APPLICATION_NAME}
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/Include
 )
 
 target_sources(${APPLICATION_NAME}
