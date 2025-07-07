@@ -8,7 +8,7 @@
 // Header includes
 // ----------------------------------------------------------------------------
 
-#include "CommonTypes.h"
+#include "Assert.h"
 #include "LogToStdOut.hpp"
 
 #include <zephyr/sys/printk.h>
@@ -17,7 +17,7 @@
 // Public functions
 // ----------------------------------------------------------------------------
 
-void LogToStdOut::ProcessLog(const uint8_t* message, size_t length, int level)
+void LogToStdOut::ProcessLogMessage(const uint8_t* message, size_t length)
 {
     ASSERT(message != nullptr);
     ASSERT(length > 0);

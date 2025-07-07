@@ -25,7 +25,6 @@ public:
      *
      * @param[in] message Pointer to the log message.
      * @param[in] length Length of the log message.
-     * @param[in] level Log level of the message.
      */
-    void ProcessLog(const uint8_t* message, size_t length, int level) override;
+    void ProcessLogMessage(const uint8_t* message, size_t length) override;
 };
