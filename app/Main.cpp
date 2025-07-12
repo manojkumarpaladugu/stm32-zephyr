@@ -8,10 +8,6 @@
 // Header includes
 // ----------------------------------------------------------------------------
 
-#define LOG_MODULE_NAME "main"
-#define MODULE_LOG_LEVEL LOG_LEVEL_DEBUG
-
-// Must be included after the log level and module name definitions
 #include "Logging.h"
 #include "Assert.h"
 #include "LogCore.hpp"
@@ -25,7 +21,7 @@ static void InitializeLogging(void)
 {
     // Register the consumer
     static LogToStdOut logToStdOut;
-    LogCore::RegisterConsumer(logToStdOut);
+    LogCore::RegisterConsumer(cLogToStdOutId, logToStdOut);
 
     // Initialize the log queue if asynchronous logging is enabled
 #ifdef CONFIG_LIB_COMMONS_LOGGING_ASYNC
@@ -47,9 +43,9 @@ int main(void)
 
     LOG_DEBUG("This is a debug message");
     LOG_INFO("This is an info message");
+    LOG_WARN("This is a warning message");
     LOG_ERROR("This is an error message");
     LOG_CRITICAL("This is a critical message");
-    LOG_WARN("This is a warning message");
 
     ASSERT(false);
 

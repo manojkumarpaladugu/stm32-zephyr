@@ -4,28 +4,21 @@
  * Author: Manoj Kumar Paladugu <paladugumanojkumar@gmail.com>
  */
 
+#pragma once
+
 // ----------------------------------------------------------------------------
 // Header includes
 // ----------------------------------------------------------------------------
 
-#include "Assert.h"
-#include "LogToStdOut.hpp"
-
-#include <zephyr/sys/printk.h>
+#include "CommonTypes.h"
 
 // ----------------------------------------------------------------------------
-// Public functions
+// Datatype definitions
 // ----------------------------------------------------------------------------
 
-void LogToStdOut::Initialize()
+enum LogConsumerId
 {
-
-}
-
-void LogToStdOut::ProcessLogMessage(const uint8_t* message, size_t length)
-{
-    ASSERT(message != nullptr);
-    ASSERT(length > 0);
-
-    printk("%.*s\n", (int)length, message);
-}
+    cLogToStdOutId = 0,     ///< Log consumer for stdout
+    cMaxLogConsumerId       ///< Maximum number of log consumers
+};
+COMPILE_ASSERT(cMaxLogConsumerId == CONFIG_LIB_COMMONS_LOGGING_MAX_CONSUMERS, "cMaxLogConsumerId exceeds CONFIG_LIB_COMMONS_LOGGING_MAX_CONSUMERS");

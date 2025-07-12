@@ -23,8 +23,3 @@ manifest:
       repo-path: manojkumarpaladugu/Commons
       revision: main
       path: modules/lib/Commons
-    - name: pigweed
-      remote: github
-      repo-path: google/pigweed
-      revision: 90d1391ff0c2fcb4717dc578bceccb2ec38643b8 # Latest as of Apr 5, 2025
-      path: third_party/pigweed

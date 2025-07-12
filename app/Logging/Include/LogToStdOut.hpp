@@ -10,15 +10,21 @@
 // Header includes
 // ----------------------------------------------------------------------------
 
-#include "IConsumer.hpp"
+#include "LogConsumerId.h"
+#include "LogToOutput.hpp"
 
 // ----------------------------------------------------------------------------
 // Class definition
 // ----------------------------------------------------------------------------
 
-class LogToStdOut : public IConsumer
+class LogToStdOut : public LogToOutput
 {
 public:
+
+    /**
+     * @brief Initialize the log output to standard output.
+     */
+    void Initialize() override;
 
     /**
      * @brief Process a log message and output it to standard output.
