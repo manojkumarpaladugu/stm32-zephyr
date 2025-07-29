@@ -23,13 +23,9 @@ static void InitializeLogging(void)
     static LogToStdOut logToStdOut;
     LogCore::RegisterConsumer(cLogToStdOutId, logToStdOut);
 
-    // Initialize the log queue if asynchronous logging is enabled
-#ifdef CONFIG_LIB_COMMONS_LOGGING_ASYNC
+#ifdef CONFIG_LIB_COMMONS_LOGGING_DEFERRED
     static uint8_t logBuffer[1024];
     LogCore::InitializeQueue(logBuffer, sizeof(logBuffer));
-
-    // Start the log core to process the queue
-    LogCore::Start();
 #endif
 }
 
