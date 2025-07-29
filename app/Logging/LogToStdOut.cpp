@@ -11,7 +11,7 @@
 #include "Assert.h"
 #include "LogToStdOut.hpp"
 
-#include <zephyr/sys/printk.h>
+#include <cstdio>
 
 // ----------------------------------------------------------------------------
 // Public functions
@@ -27,5 +27,5 @@ void LogToStdOut::ProcessLogMessage(const uint8_t* message, size_t length)
     ASSERT(message != nullptr);
     ASSERT(length > 0);
 
-    printk("%.*s\n", (int)length, message);
+    printf("%.*s\n", (int)length, message);
 }

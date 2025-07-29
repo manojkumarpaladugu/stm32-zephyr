@@ -9,6 +9,8 @@ target_include_directories(${APPLICATION_NAME}
         ${CMAKE_CURRENT_SOURCE_DIR}/Include
 )
 
+zephyr_include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Include)
+
 target_sources(${APPLICATION_NAME}
     PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/LogToStdOut.cpp
