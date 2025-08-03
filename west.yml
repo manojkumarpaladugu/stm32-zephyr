@@ -18,6 +18,11 @@ manifest:
         name-allowlist:
           - cmsis      # required by the ARM port
           - hal_stm32  # required by the nucleo_f302r8 board (STM32 based)
+    - name: zephyr-custom-platforms
+      remote: github
+      repo-path: manojkumarpaladugu/zephyr-custom-platforms
+      revision: main
+      path: modules/custom-platforms
     - name: Commons
       remote: github
       repo-path: manojkumarpaladugu/Commons
