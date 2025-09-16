@@ -1,15 +1,15 @@
 manifest:
   defaults:
-    remote: github
+    remote: github/manojkumarpaladugu
 
   remotes:
-    - name: github
-      url-base: ssh://git@github.com
+    - name: github/manojkumarpaladugu
+      url-base: ssh://git@github.com/manojkumarpaladugu
 
   projects:
     - name: zephyr
-      remote: github
-      repo-path: zephyrproject-rtos/zephyr
+      remote: github/manojkumarpaladugu
+      repo-path: zephyr
       revision: v3.7.1
       path: zephyr
       import:
@@ -18,13 +18,13 @@ manifest:
         name-allowlist:
           - cmsis      # required by the ARM port
           - hal_stm32  # required by the nucleo_f302r8 board (STM32 based)
-    - name: zephyr-custom-platforms
-      remote: github
-      repo-path: manojkumarpaladugu/zephyr-custom-platforms
+    - name: zephyr-plus
+      remote: github/manojkumarpaladugu
+      repo-path: zephyr-plus
       revision: main
-      path: modules/custom-platforms
+      path: modules/zephyr-plus
     - name: Commons
-      remote: github
-      repo-path: manojkumarpaladugu/Commons
+      remote: github/manojkumarpaladugu
+      repo-path: Commons
       revision: main
       path: modules/lib/Commons
