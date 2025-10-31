@@ -23,7 +23,7 @@ static void InitializeLogging(void)
     static LogToStdOut logToStdOut;
     LogCore::RegisterConsumer(cLogToStdOutId, logToStdOut);
 
-#ifdef CONFIG_LIB_COMMONS_LOGGING_DEFERRED
+#ifdef CONFIG_COMMONS_LOGGING_DEFERRED
     static uint8_t logBuffer[1024];
     LogCore::InitializeQueue(logBuffer, sizeof(logBuffer));
 #endif

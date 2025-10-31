@@ -21,4 +21,4 @@ enum LogConsumerId
     cLogToStdOutId = 0,     ///< Log consumer for stdout
     cMaxLogConsumerId       ///< Maximum number of log consumers
 };
-COMPILE_ASSERT(cMaxLogConsumerId == CONFIG_LIB_COMMONS_LOGGING_MAX_CONSUMERS, "cMaxLogConsumerId exceeds CONFIG_LIB_COMMONS_LOGGING_MAX_CONSUMERS");
+COMPILE_ASSERT(cMaxLogConsumerId == CONFIG_COMMONS_LOGGING_MAX_CONSUMERS, "cMaxLogConsumerId exceeds CONFIG_COMMONS_LOGGING_MAX_CONSUMERS");
