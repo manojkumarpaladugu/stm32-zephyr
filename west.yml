@@ -1,15 +1,15 @@
 manifest:
   defaults:
-    remote: github/manojkumarpaladugu
+    remote: github
 
   remotes:
-    - name: github/manojkumarpaladugu
-      url-base: ssh://git@github.com/manojkumarpaladugu
+    - name: github
+      url-base: ssh://git@github.com
 
   projects:
     - name: zephyr
-      remote: github/manojkumarpaladugu
-      repo-path: zephyr
+      remote: github
+      repo-path: manojkumarpaladugu/zephyr
       revision: v3.7.1
       path: zephyr
       import:
@@ -19,12 +19,17 @@ manifest:
           - cmsis      # required by the ARM port
           - hal_stm32  # required by the nucleo_f302r8 board (STM32 based)
     - name: zephyr-plus
-      remote: github/manojkumarpaladugu
-      repo-path: zephyr-plus
+      remote: github
+      repo-path: manojkumarpaladugu/zephyr-plus
       revision: main
       path: modules/zephyr-plus
     - name: Commons
-      remote: github/manojkumarpaladugu
-      repo-path: Commons
+      remote: github
+      repo-path: manojkumarpaladugu/Commons
       revision: main
       path: modules/lib/Commons
+    - name: vscode-debug-config
+      remote: github
+      repo-path: manojkumarpaladugu/vscode-debug-config
+      revision: main
+      path: .vscode
